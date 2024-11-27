@@ -26,7 +26,7 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no ec2-user@44.208.30.200 << 'EOF'
-            cd /home/ec2-user/Ec2HtmlYml
+            cd /home/ec2-user/Ec2HtmlIp
             git pull origin main  # Actualizar los archivos del repositorio
             sudo cp index.html /var/www/html/  # Copiar index.html al directorio de Nginx
             sudo systemctl restart nginx  # Reiniciar Nginx
